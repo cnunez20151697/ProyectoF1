@@ -1,0 +1,305 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+
+
+body{
+    background: #E9ECF4;
+    color: rgba(27, 25, 25, 0.856);
+    font-family: Roboto, sans-serif;
+    transition: linear 1s;
+}
+
+h5{
+    color: rgba(175, 160, 160, 0.616);
+}
+
+.contenedor_general{
+    width: 90%;
+    max-width: 1000px;
+    margin: 0px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas:"header header header header"
+                        "contenidop contenidop contenidop contenidop" 
+                        "contenido contenido contenido side_bar"
+                        "contenido_2 contenido_2 contenido_2 contenido_2"
+                        "contenido_22 contenido_22 contenido_223 contenido_223"
+                        "contenidop2 contenidop2 contenidop2 contenidop2"
+                        "contenido_23 contenido_23 contenido_231 contenido_231"
+                        "contenido_23 contenido_23 contenido_232 contenido_232"
+                        "widget1 widget2 widget3 widget4"
+                        "pie_pagina pie_pagina pie_pagina pie_pagina";
+    
+}
+
+
+
+
+
+
+.contenedor_general > div,
+.contenedor_general .header,
+.contenedor_general .contenido,
+.contenedor_general .contenidop2,
+.contenedor_general .contenido_2,
+.contenedor_general .contenido_22,
+.contenedor_general .contenido_223,
+.contenedor_general .contenido_23,
+.contenedor_general .contenido_231,
+.contenedor_general .contenido_232,
+.contenedor_general .pie_pagina,
+.contenedor_general .side_bar{
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    
+}
+
+
+
+.contenedor_general .contenidop{
+
+text-align: center;
+justify-content: center;
+align-items: center;
+
+}
+
+.contenedor_general .header{
+
+    grid-area: header;
+    background:  #12203E;
+    border-radius: 0px 0px 20px 20px;
+    color: #fff;
+   /* grid-column-start: 1; */
+   /* grid-column-end: -1; */
+}
+
+.contenedor_general .contenidop2{
+    background:  #E9ECF4;
+    padding: 0px;
+    border-radius: 20px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.contenedor_general .contenidop2 span{
+    text-align: center;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contenedor_general .contenidop2 img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.contenedor_general .contenidop2{
+    grid-area: contenidop2;
+}
+.contenedor_general .contenidop{
+    grid-area: contenidop;
+}
+
+.contenedor_general .contenido{
+    grid-area: contenido;
+    /* grid-column: span 2; */
+}
+
+.contenedor_general .contenido_2{
+    grid-area: contenido_2;
+    text-align: center;
+}
+
+.contenedor_general .contenido_22{
+    grid-area: contenido_22;
+}
+
+.contenedor_general .contenido_223{
+    grid-area: contenido_223;
+}
+
+.contenedor_general .contenido_23{
+    grid-area: contenido_23;
+}
+
+.contenedor_general .contenido_231{
+    grid-area: contenido_231;
+}
+
+.contenedor_general .contenido_232{
+    grid-area: contenido_232;
+}
+
+.contenedor_general .side_bar{
+    /* grid-column: 3 / 4; */
+    background: #fAA43D;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: side_bar;
+    /* grid-row: span 2; */
+    min-width: 100px;
+}
+
+.contenedor_general .widget1,
+.contenedor_general .widget2,
+.contenedor_general .widget3,
+.contenedor_general .widget4{
+    transition-duration: 1s;
+    background-color: #12203E;
+    cursor: pointer;
+    color: #fff;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+    .contenedor_general .widget1 :hover,
+    .contenedor_general .widget2 :hover,
+    .contenedor_general .widget3 :hover,
+    .contenedor_general .widget4 :hover{
+        
+       
+    }
+
+
+
+.contenedor_general .widget1{
+    grid-area: widget1;
+}
+.contenedor_general .widget2{
+    grid-area: widget2;
+}
+
+.contenedor_general .widget3{
+    grid-area: widget3;
+}
+.contenedor_general .widget4{
+    grid-area: widget4;
+}
+
+
+
+
+
+.contenedor_general .pie_pagina{
+    border-radius: 20px 20px 0px 0px;
+    background: #12203E;
+    color: #fff;
+    grid-area: pie_pagina;
+    text-align: center;
+    /* grid-column: span 3;  */
+    
+}
+
+.contenedor_general .side_bar h5{
+    color: rgba(29, 27, 27, 0.74);
+    text-align: center;
+}
+
+
+
+
+@media screen and (max-width: 768px){
+    .contenedor_general{
+        grid-template-areas: 
+        "header header header header"
+        "contenidop contenidop contenidop contenidop" 
+        "contenido contenido contenido contenido"
+        "side_bar side_bar side_bar side_bar"
+        "contenido_2 contenido_2 contenido_2 contenido_2"
+        "contenido_22 contenido_22 contenido_223 contenido_223"
+        "contenidop2 contenidop2 contenidop2 contenidop2"
+        "contenido_23 contenido_23 contenido_231 contenido_231"
+        "contenido_23 contenido_23 contenido_232 contenido_232"
+        "widget1 widget1 widget2 widget2"
+        "widget3 widget3 widget4 widget4"
+        "pie_pagina pie_pagina pie_pagina pie_pagina";
+    }
+    
+
+    .contenedor_general .widget1,
+    .contenedor_general .widget2,
+    .contenedor_general .widget3,
+    .contenedor_general .widget4
+    {
+     transition-duration: 2s;
+        background: #55a8fd;
+   
+     color: #fff;
+     height: 50px;
+     text-align: center;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    
+    
+    }
+
+    
+}
+
+@media screen and (max-width: 600px){
+    .contenedor_general{
+        
+        grid-template-areas: 
+        "header header header header" 
+        "contenidop contenidop contenidop contenidop"
+        "contenido contenido contenido contenido"
+        "side_bar side_bar side_bar side_bar"
+        "contenido_2 contenido_2 contenido_2 contenido_2"
+        "contenido_22 contenido_22 contenido_223 contenido_223"
+        "contenido_23 contenido_23 contenido_23 contenido_23"
+        "contenidop2 contenidop2 contenidop2 contenidop2"
+        "contenido_231 contenido_231 contenido_231 contenido_231"
+        "contenido_232 contenido_232 contenido_232 contenido_232"
+        "widget1 widget1 widget1 widget1"
+        "widget2 widget2 widget2 widget2"
+        "widget3 widget3 widget3 widget3"
+        "widget4 widget4 widget4 widget4"
+        "pie_pagina pie_pagina pie_pagina pie_pagina";
+        
+    }
+
+    .contenedor_general .contenido_22 h1,
+    .contenedor_general .contenido_223 h1{
+        font-size: x-large;
+    }
+    .contenedor_general .contenidop2 span{
+        font-size: medium;
+    }
+    .contenedor_general .widget1,
+    .contenedor_general .widget2,
+    .contenedor_general .widget3,
+    .contenedor_general .widget4
+    {
+     transition-duration: 2s;
+        background: #55a8fd;
+   
+     color: #fff;
+     height: 50px;
+     text-align: center;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    
+    
+    }
+}
+
+
