@@ -233,23 +233,7 @@ align-items: center;
     }
     
 
-    .contenedor_general .widget1,
-    .contenedor_general .widget2,
-    .contenedor_general .widget3,
-    .contenedor_general .widget4
-    {
-     transition-duration: 2s;
-        background: #55a8fd;
-   
-     color: #fff;
-     height: 50px;
-     text-align: center;
-     display: flex;
-     align-items: center;
-     justify-content: center;
     
-    
-    }
 
     
 }
@@ -289,7 +273,7 @@ align-items: center;
     .contenedor_general .widget4
     {
      transition-duration: 2s;
-        background: #55a8fd;
+        
    
      color: #fff;
      height: 50px;
