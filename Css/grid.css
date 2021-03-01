@@ -9,6 +9,7 @@ body{
     color: rgba(27, 25, 25, 0.856);
     font-family: Roboto, sans-serif;
     transition: linear 1s;
+    
 }
 
 h5{
@@ -76,10 +77,52 @@ align-items: center;
     background:  #12203E;
     border-radius: 0px 0px 20px 20px;
     color: #fff;
+    display: flex;
    /* grid-column-start: 1; */
    /* grid-column-end: -1; */
 }
 
+.contenedor_general .header .nav-links{
+    position: relative;
+    align-items: flex-start;
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    left: 55%;
+    width: 60%;
+    align-content: space-around;
+}
+.contenedor_general .header .nav-links li{
+    
+    margin: 20px;
+    border-radius: 20px;
+    
+    
+}
+
+.contenedor_general .header .nav-links li :hover{
+    background: rgba(32, 18, 161, 0.521);
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: linear 0.2s;
+}
+
+.contenedor_general .header .nav-links li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.contenedor_general .header .navbar-toggle div{
+    width: 25px;
+    height: 5px;
+    margin: 5px;
+    background: #fabd07c9;
+}
+
+.contenedor_general .header .navbar-toggle {
+    display: none;
+}
 .contenedor_general .contenidop2{
     background:  #E9ECF4;
     padding: 0px;
@@ -169,14 +212,7 @@ align-items: center;
     
 }
 
-    .contenedor_general .widget1 :hover,
-    .contenedor_general .widget2 :hover,
-    .contenedor_general .widget3 :hover,
-    .contenedor_general .widget4 :hover{
-        
-       
-    }
-
+  
 
 
 .contenedor_general .widget1{
@@ -214,7 +250,13 @@ align-items: center;
 
 
 
-
+@media screen and (max-width: 1028px){
+    .contenedor_general .header .nav-links{
+        
+        left: 40%;
+        
+    }
+}
 @media screen and (max-width: 768px){
     .contenedor_general{
         grid-template-areas: 
@@ -230,6 +272,42 @@ align-items: center;
         "widget1 widget1 widget2 widget2"
         "widget3 widget3 widget4 widget4"
         "pie_pagina pie_pagina pie_pagina pie_pagina";
+    }
+
+    .contenedor_general .header .navbar-toggle {
+        display: block;
+        cursor: pointer;
+        margin-top: 2%;
+        margin-left: 85%;
+    }
+
+    .contenedor_general .header .nav-links {
+        
+        position: absolute;
+        top: 100vh;
+        background: #12203ee8;
+        width: 90%;
+        left: 5%;
+        height: 88vh;
+        flex-direction: column;
+        border-radius: 10px;
+        visibility: hidden;
+        transform: translateY(0%);
+        
+    }
+
+    .contenedor_general .header .nav-links li{
+        text-align: center;
+        margin-top: 15%;
+        text-decoration: overline 2px;
+        font-size: larger;
+    }
+
+    .contenedor_general .header .nav-links.active {
+        
+        visibility: visible;
+        transition: ease-in-out 0.5s;
+        transform: translateY(-100%);
     }
     
 
@@ -267,6 +345,20 @@ align-items: center;
     .contenedor_general .contenidop2 span{
         font-size: medium;
     }
+
+
+    .contenedor_general .header .navbar-toggle {
+        display: block;
+        cursor: pointer;
+        margin-top: 5%;
+        margin-left: 70%;
+    }
+
+    .contenedor_general .header .nav-links {
+        height: 90.5vh;
+    }
+
+
     .contenedor_general .widget1,
     .contenedor_general .widget2,
     .contenedor_general .widget3,
@@ -284,6 +376,8 @@ align-items: center;
     
     
     }
+
+
 }
 
 

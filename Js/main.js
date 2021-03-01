@@ -1,17 +1,15 @@
-const enlaces = document.getElementsByClassName("enlaces")[0];
-const hamburger = document.getElementsByClassName("hamburger")[0];
-const menuHamburger = document.getElementById("hamburger");
-let abieto = false;
+let navbar = document.getElementById('nav-l')
 
-alert("HOla")
+let navtoggle = document.getElementById('nav-t')
 
-const toggleMenu = () =>{
-    enlaces.classList.toggle("enlaces2");
-    enlaces.style.transition = "transform 0.5s ease-in-out";
-}
+navtoggle.addEventListener('click', () =>{
+    
 
+    navbar.classList.toggle('active');
+    navbar.style.transition ="transition 0.5 linear";
 
-window.addEventListener("click", function(){
-    toggleMenu();
 })
+
+
+
 
